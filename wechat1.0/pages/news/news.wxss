@@ -1,0 +1,236 @@
+/* pages/brandCar/brandCar.wxss */
+page {
+  font-family: "Microsoft YaHei";
+  color: #444;
+  background: #fff;
+}
+
+/* 轮番图 */
+.swiper-container{
+  position: relative;
+}
+
+.swiper-container .swiper{
+  height: 400rpx;
+}
+
+.swiper-container .swiper .img{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container .dots{
+  position: absolute;
+  right: 40rpx;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-container .dots .dot{
+  margin: 0 10rpx;
+  width: 28rpx;
+  height: 28rpx;
+  background: #fff;
+  border-radius: 50%;
+  transition: all .6s;
+  font: 300 18rpx/28rpx "microsoft yahei";
+  text-align: center;
+}
+
+.swiper-container .dots .dot.active{
+  background: #f80;
+  color:#fff;
+}
+
+/* 热门车型 */
+
+/* 热门车型整体外框 */
+.hot-csrs {
+  width: 100%;
+  height:216rpx;
+  /* padding-top: 0rpx; */
+  position: relative;
+}
+/* 热门车型滚屏外框 */
+.hot-scroll{
+  height: 196rpx;
+  overflow: hidden;
+  padding-top: 10rpx;
+}
+
+/* 热门车型标题外框 */
+.hot-title-border{
+  height: 90rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: linear-gradient(#ffffff, #fdfdfd, #ffffff);
+  z-index: -3;
+}
+/* 文字：“热门车型” */
+.hotcar{
+  height: 100rpx;
+  font-size: 36rpx;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  line-height: 500rpx;
+}
+/* 图片：星星 */
+.star{
+  height: 100rpx;
+  width: 40rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* 热门车型-所有车型外框 */
+.banner {
+  display:-webkit-box;
+-webkit-box-orient:vertical;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 40rpx 10rpx 50rpx 10rpx rgb(235, 235, 235);
+
+}
+/* 热门车型-单个车型外框 */
+.hot-view {
+  width: 800rpx;
+  margin: 0 14rpx;
+}
+/* 热门车型-单个车型图片和文字外框 */
+.hotimg {
+  width: 800rpx;
+  border-bottom: 5rpx solid #fafafa; 
+}
+/* 热门车型-单个车型的图片 */
+.hotimg image {
+  width: 300rpx;
+}
+/* 热门车型-单个车型的文字 */
+.hottxt {
+  padding-left: 90rpx;
+  font-size: 36rpx;
+  color: #666;
+  width: 250rpx;
+  display: inline-block;
+  line-height: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.tianjiatxt, .tianjiapic {
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: #f60;
+  color: #fff;
+}
+
+.tianjiapic {
+  background: #00cdf2;
+  margin-top: 10rpx;
+}
+
+.addto-text, .addto-pic {
+  width: 600rpx;
+  height: 200rpx;
+  border: 2rpx solid #3572ce;
+  margin-top: 10rpx;
+  color: #000;
+  overflow: hidden;
+}
+
+.addto-pic {
+
+  border: 1px solid pink;
+}
+
+/*轮番图 图片*/
+.img {
+  background-size: cover;
+
+  width: 80rpx;
+  height: 80rpx;
+
+  /*border-radius:50%;*/
+  background: #fff;
+}
+
+.img-hot {
+  display: block;
+  margin: 0 auto;
+}
+
+.img-list {
+  display: inline-block;
+
+}
+
+.img-drawer {
+  width: 240rpx;
+  height: 160rpx;
+  border-radius: 0;
+}
+
+
+/* 标签切换--S */
+
+.swiper-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: #444;
+  background: #fff;
+  border-bottom: solid 1rpx #e8e8e8;
+  border-top: solid 1rpx #e8e8e8;
+}
+
+.swiper-head-item:first-child {
+  width: 50%;
+  border-right: solid 1rpx #e8e8e8;
+}
+
+.swiper-head-item:last-child {
+  width: 50%;
+}
+
+.on {
+  color: #3572ce;
+}
+
+.swiper-content {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 标签切换--E */
+
+
+
+
+/*抽屉*/
+@import "../drawer/drawer.wxss";
+
+.red {
+  background: red;
+}
+
+.blue {
+  background: blue;
+}

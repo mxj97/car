@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/news/news",  
+    "pages/contrast/contrast",
+    "pages/details/details",
+    "pages/personal/personal",
+    "pages/parameter/parameter",
+    "pages/contrast_add/contrast_add",
+    "pages/discern/discern",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 123
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#33ADFF",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "text": "热门推荐",
+        "iconPath": "pages/images/tab2.png",
+        "selectedIconPath": "pages/images/tab2s.png"
+      },
+      {
+        "pagePath": "pages/discern/discern",
+        "text": "识车",
+        "iconPath": "pages/images/tab1.png",
+        "selectedIconPath": "pages/images/tab1s.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "车型库",
+        "iconPath": "pages/images/tab3.png",
+        "selectedIconPath": "pages/images/tab3s.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

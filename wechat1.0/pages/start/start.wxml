@@ -1,0 +1,4 @@
+<!--pages/start/start.wxml-->
+<view class='start'>
+	<button bindtap='goToNewsPage' class='startbutton'> 点击进入>> </button>
+</view>

@@ -1,0 +1,102 @@
+<!--personal.wxml-->
+<!-- 个人中心 -->
+<view bindtouchstart="handletouchstart" bindtouchmove="handletouchmove" bindtouchend="handletouchend">
+
+  <view class='head'>
+    <view class='head-img'>
+      <block wx:if="{{userInfo.avatarUrl}}">
+        <image style='width:160rpx;' data-avatarUrl='{{userInfo.avatarUrl}}' mode='widthFix' src='{{userInfo.avatarUrl}}'></image>
+      </block>
+      <block wx:else>
+        <image style='width:160rpx;' mode='widthFix' bindtap='redelegation' src='http://i1.dd-img.com/assets/image/1512041172-85824baf7c27c97a-512w-512h.png'></image>
+      </block>
+    </view>
+
+    <block wx:if="{{userInfo.nickName}}">
+      <view class='head-name'>{{userInfo.nickName}}</view>
+    </block>
+    <block wx:else>
+      <view class='head-name'  bindtap='redelegation'>登录</view>
+    </block>
+
+  </view>
+
+
+  <!-- 车型对比 -->
+  <view class='section'>
+    <view class='list'>
+      <view class='list-column' bindtap="carContrast">
+        <view class='list-column-intro'>
+          <image src='http://i1.dd-img.com/assets/image/1510125363-df8aedd1b1bdd726-40w-40h.png'></image>
+          <text>车型对比</text>
+        </view>
+        <view class='list-column-next'>
+          <image src='http://i1.dd-img.com/assets/image/1510126583-a6c644a211cad9a3-16w-26h.png'></image>
+        </view>
+      </view>
+
+    </view>
+  </view>  
+
+</view>
+
+
+
+
+<button animation="{{animationData}}" class="sharebtn" open-type="share">
+  <text>分享给好友</text>
+  <image class="sharebtnicon" mode="widthFix" src='http://i1.dd-img.com/assets/image/1510898451-a672fd0868b82de9-48w-48h.png'></image>
+</button>
+
+
+
+ <scroll-view class="swiper-content" scroll-y="{{scrollBoolean}}"  enable-back-to-top='true' style="height:{{winHeight}}px"   bindscroll="scroll" scroll-into-view="{{toView}}"  class="{{showmask ? 'hiddenClass' :''}}"> 
+
+
+  <!--品牌列表 S-->
+  <view class="brand-scroll">
+    <view class="brand-item" wx:for="{{brandList}}" wx:for-index="letterIndex" wx:for-item="letterItem">
+      <text id="{{letterItem.flag}}">{{letterItem.flag}}</text>
+      <view wx:for="{{letterItem.items}}" wx:for-item="carItem" bindtap="showDrawer" data-id="{{carItem.ppid}}">
+        <image class="img img-list" src="{{carItem.logo}}" mode="aspectFit"></image>
+        <text class="brand-name">{{carItem.pp_name}}</text>
+      </view>
+    </view>
+  </view>
+
+
+  <!--字母列表 S-->
+  <view class="letter-item {{scrollTop>350 ? 'letter-block' : 'letter-none'}}" bindtap="clickLetter" catchtouchmove="touchMove" catchtouchend="touchEnd">
+    <view class="letter-li {{currentLetter==letterIndex ? 'add-color' : ''}}" data-current="{{letterIndex}}" wx:for="{{brandList}}" wx:for-item="letterItem" wx:for-index="letterIndex" data-letter="{{letterItem.flag}}">{{letterItem.flag}}       </view>
+  </view>
+  <!--字母列表 E-->
+
+
+  <button animation="{{animationData}}" class="sharebtn" open-type="share">
+    <text>分享给好友</text>
+    <image class="sharebtnicon" mode="widthFix" src='http://i1.dd-img.com/assets/image/1510898451-a672fd0868b82de9-48w-48h.png'></image>
+  </button>
+  <!--品牌列表 E-->
+
+
+</scroll-view>
+
+
+
+<!-- 城市保留值 -->
+<view class="cityIdval" data-cityval="{{cityIdData}}"></view>
+
+<!--抽屉 S-->
+<import src="../drawer/drawer.wxml" />
+<template is="drawer" data="{{showDrawerFlag,animationDrawer,drawerSeriesData,num,scrollBoolean}}"></template>
+<!--标签切换内容E-->
+
+<!--标签切换 E-->
+
+<loading hidden="{{hidden}}">
+  加载中...
+</loading>
+
+
+
+

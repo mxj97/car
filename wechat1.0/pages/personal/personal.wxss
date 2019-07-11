@@ -1,0 +1,305 @@
+/**personal.wxss**/
+
+ 
+ /* 个人中心  */
+ .head{
+   width: 100%;
+   height: 320rpx;
+   background:linear-gradient(-180deg, rgba(79, 155, 255, 0.75) 7%, rgba(123,196,237, 0.735) 100%);
+   text-align: center;
+ }
+ .head-img{
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 60rpx;
+    overflow: hidden;
+ }
+ .head-name{
+   color: #fff;
+   font-size: 36rpx;
+   line-height: 60rpx;
+ }
+ 
+
+  /* 车型对比 */
+ .section{
+   /* height: 100%; */
+    margin-top: 30rpx;
+    margin-bottom: 25rpx;
+    background-color: #f8f8f8;
+    box-shadow: 30rpx 10rpx 50rpx 10rpx  rgb(235, 235, 235);
+ }
+ .list{
+   background-color: #fff;
+   margin-bottom: 0rpx;
+ }
+.list-column{
+   display: -webkit-box;
+   -webkit-box-orient: horizontal;
+   height: 120rpx;
+   line-height: 120rpx;
+   padding: 0 30rpx;
+   border-bottom: 1px solid #fafafa;
+ }
+ .list-column-intro{
+   -webkit-box-flex: 1;
+ }
+.list-column-intro image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+  margin-bottom: 10rpx;
+}
+.list-column-intro text{
+  font-size: 34rpx;
+  color: #333333;
+}
+.list-column-next image{
+  width: 30rpx;
+  height: 40rpx;
+}
+.list-column-next text{
+  height: 40rpx;
+  min-width: 40rpx;
+  line-height: 40rpx;
+  display: inline-block;
+  background: #ff3333;
+  text-align: center;
+  font-size: 28rpx;
+  border-radius: 50%; 
+  color: #fff;
+  margin-right: 14rpx;
+}
+
+
+
+
+
+/* 车型库 */
+
+
+
+
+.tianjiatxt, .tianjiapic {
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: #f60;
+  color: #fff;
+}
+
+.tianjiapic {
+  background: #00cdf2;
+  margin-top: 10rpx;
+}
+
+.addto-text, .addto-pic {
+  width: 600rpx;
+  height: 200rpx;
+  border: 2rpx solid #3572ce;
+  margin-top: 10rpx;
+  color: #000;
+  overflow: hidden;
+}
+
+.addto-pic {
+
+  border: 1px solid pink;
+}
+
+/*图片*/
+
+.img {
+  /*background: url("chu.png") no-repeat;*/
+  background-size: cover;
+
+  width: 80rpx;
+  height: 80rpx;
+
+  /*border-radius:50%;*/
+  background: #fff;
+}
+
+.img-hot {
+  display: block;
+  margin: 0 auto;
+}
+
+.img-list {
+  display: inline-block;
+
+}
+
+.img-drawer {
+  width: 240rpx;
+  height: 160rpx;
+  border-radius: 0;
+}
+
+
+/* 标签切换--S */
+
+.swiper-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: #444;
+  background: #fff;
+  border-bottom: solid 1rpx #e8e8e8;
+  border-top: solid 1rpx #e8e8e8;
+}
+
+.swiper-head-item:first-child {
+  width: 50%;
+  border-right: solid 1rpx #e8e8e8;
+}
+
+.swiper-head-item:last-child {
+  width: 50%;
+}
+
+.on {
+  color: #3572ce;
+}
+
+.swiper-content {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 标签切换--E */
+
+
+/*品牌列表*/
+
+.brand-scroll {
+  /*height:667px; *//*??*/
+}
+.brand-item{
+  background-color: #fff;
+}
+
+.brand-item view {
+  display: block;
+}
+
+.brand-item > text {
+  display: block;
+ color:#666666;
+  background:#fafafa;
+  font-size: 34rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 30rpx;
+}
+
+.brand-item > view {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 0 30rpx;
+   border-bottom: 1rpx solid #f2f2f2; 
+}
+
+
+.brand-name {
+  width: 100%;
+  -webkit-box-flex: 1;
+  padding-left: 20rpx;
+  font-size:34rpx;
+  color:#333333;
+}
+
+
+
+/*字母列表*/
+.letter-item {
+  width: 52rpx;
+  height: 385px;
+  background-color: #fff;
+  position: fixed;
+  top: 69%;
+  right: 10rpx;
+  transform: translate(0, -50%);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+  border-radius:200rpx;
+  padding: 26rpx 0;
+  box-sizing: border-box;
+}
+
+
+.letter-none {
+  display: none;
+}
+
+.letter-block {
+  display: block;
+}
+
+.flex-item {
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+
+  /* 没用？*/
+.letter-hover {
+  position: fixed;
+  width: 20px;
+  height: 370px;
+  top: 54%;
+  right: 26rpx;
+  transform: translate(0, -50%);
+  border-radius: 7px;
+  /*  background: rgba(0, 0, 0, 0.2);*/
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.letter-li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  font-size:28rpx;
+  color:#999;
+  line-height:32rpx; 
+}
+
+.add-color {
+  color:#33adff;
+  font-weight: bold;
+  font-size:35rpx;
+}
+
+.letter-li.five {
+  width: 22rpx;
+  height: 20rpx;
+}
+
+.letter-li:target {
+  color: red;
+}
+
+/*抽屉*/
+@import "../drawer/drawer.wxss";
+
+.red {
+  background: red;
+}
+
+.blue {
+  background: blue;
+}

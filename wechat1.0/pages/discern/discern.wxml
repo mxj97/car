@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="img_wrap_big">
+    <view class="img_wrap">
+      <image src="{{ img }}" mode='aspectFill'/>
+    </view>
+  </view>
+
+  <view wx:if="{{result.length>0}}" class="table">
+
+    <view wx:for="{{result}}"wx:key="key">
+      <view class="user">    
+        <view class="user-names">
+          <text class="user-names-title" width="50px">车型名称:</text>
+          <text style='margin-left:14rpx'>{{item.name}}</text>  
+        </view>
+        <view class="user-probabilitys">
+          <text class="user-probabilitys-title">车型年份:</text>
+          <text style='margin-left:14rpx'>{{item.year}}</text>  
+        </view>
+        <view class="user-probabilitys">
+          <text class="user-probabilitys-title">车型颜色:</text>
+          <text style='margin-left:14rpx'>{{colorResult}}</text> 
+        </view>
+        <view class="user-probabilitys">
+          <text class="user-probabilitys-title">可信度:</text>
+          <text style='margin-left:14rpx'>{{item.score}}</text> 
+        </view>
+      </view>    
+
+      <view>
+        <view class='baikeinfo' wx:if="{{item.baike_info}}">
+          <view class='baikecard'>
+            <text style='font-size:36rpx;margin:14rpx 0rpx;color:#3a3a3a;background-color: transparent' wx:if="{{item.name}}">{{item.name}}</text>
+            <text class='baikecontent' wx:if="{{item.baike_info.description}}">{{item.baike_info.description}}</text>
+            <view class='baikeform'>
+              <button class='baikeformore' bindtap="goToGarage" wx:if="{{item.baike_info.description}}">进入车型库 了解更多参数>></button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view style="height: 70px; width: 750rpx;"> </view>
+
+  <view class="upview" style="position:fixed; bottom: 15rpx;width: 750rpx;">
+  <button bindtap="uploads" class="up">拍照/选取图片识别</button>
+  </view>
+  
+
+</view>

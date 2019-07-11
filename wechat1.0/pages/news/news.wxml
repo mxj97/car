@@ -1,0 +1,59 @@
+<!-- 轮番图 -->
+<scroll-view class="swiper-content" scroll-y="{{scrollBoolean}}"  enable-back-to-top='true' style="height:{{winHeight}}px"   bindscroll="scroll" scroll-into-view="{{toView}}"  class="{{showmask ? 'hiddenClass' :''}}">
+
+<view class="recommend" >
+  <view class="swiper-container">
+    <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+      <block wx:for="{{slider}}" wx:key="unique">
+        <swiper-item data-id="{{item.id}}" data-url="{{item.linkUrl}}">
+          <image src="{{item.picUrl}}" class="img"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{slider}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}" bindtap="chuangEvent" id="{{index}}">{{index+1}}</view>
+      </block>
+    </view>
+  </view>
+</view>
+<!-- 轮番图 -->
+
+
+
+
+  <!-- 热门车型 S -->
+  <view class='hot-csrs'>
+    <scroll-view class='hot-scroll' scroll-y="true" style="height: 900px" data-banner="{{bannerTab}}">
+      <view class='hot-title-border'>
+        <view>
+        <image class='star' mode="aspectFit" src="../images/hotcar.png"> </image>
+        </view>
+        <text class='hotcar'>热门车型</text>
+        <view>
+        <image class='star' mode="aspectFit" src="../images/hotcar.png"> </image>
+        </view>
+      </view>
+      <view class="banner">
+        <view class='hot-view' wx:for="{{brandData}}" wx:for-item="hotCaritem" bindtap="gotoSeries" data-pinyin="{{hotCaritem.pinyin}}" data-pserid="{{hotCaritem.cxid}}">
+          <view class="hotimg">
+            <image src=" {{hotCaritem.focus}}" mode='widthFix'></image>
+            <text class='hottxt'>{{hotCaritem.pp_name}}{{hotCaritem.cx_name}}</text>
+          </view> 
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 热门车型 E -->
+
+
+  </scroll-view>
+
+
+
+ <button animation="{{animationData}}" class="sharebtn" open-type="share">
+    <text>分享给好友</text>
+    <image class="sharebtnicon" mode="widthFix" src='http://i1.dd-img.com/assets/image/1510898451-a672fd0868b82de9-48w-48h.png'></image>
+  </button>
+
+

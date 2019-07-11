@@ -1,0 +1,24 @@
+/* pages/start/start.wxss */
+
+.startbutton{ 
+	width:100%; 
+	height: 90rpx;  
+  text-align: center;
+  top:80%;
+	background-color: transparent;   /*按钮透明*/  
+	border:none;				/*设置按钮边框*/
+  color: #ffffff;
+  z-index: 0;
+  position: fixed;
+}
+.startbutton::after{
+	border:none;
+}
+
+.start{
+width:100%;
+height:100%;
+background-image: url("https://wx1.sinaimg.cn/mw690/67852952ly1g4n07on04tj20u01j01kx.jpg");
+background-size: cover;
+position: fixed;
+}
